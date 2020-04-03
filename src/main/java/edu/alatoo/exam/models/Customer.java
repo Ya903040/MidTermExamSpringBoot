@@ -9,7 +9,20 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    String firstName, lastName, emailAddress, jobTitle, mobilePhone, city, webPage;
+    @Column(name = "first_name")
+    String firstName;
+    @Column(name = "last_name")
+    String lastName;
+    @Column(name = "email_address")
+    String emailAddress;
+    @Column(name = "job_title")
+    String  jobTitle;
+    @Column(name = "mobile_phone")
+    String mobilePhone;
+    @Column(name = "city")
+    String city;
+    @Column(name = "web_page")
+    String webPage;
 
     public Customer() {
     }

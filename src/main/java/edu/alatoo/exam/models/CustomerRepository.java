@@ -9,4 +9,7 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
     @Override
     List<Customer> findAll();
+
+    @Override
+    <S extends Customer> S save(S entity);
 }

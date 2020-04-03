@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-hello
+<a href="/add">add</a>
+
+<div th:unless="${#lists.isEmpty(customers)}">
+    <dl th:each="customer : ${customers}">
+        <dt class="bookHeadline">
+            <span th:text="${customer.firstName}">name</span>
+            <span th:text="${customer.lastName}"> surname</span>
+        </dt>
+    </dl>
+</div>
 </body>
 </html>
